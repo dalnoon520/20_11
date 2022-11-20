@@ -188,3 +188,12 @@ function createCanvas(properties) {
 }
 
 update();
+
+
+setTimeout(() => {
+    console.log(123)
+    console.log(document.getElementById("playAudio"))
+    document.body.addEventListener('mousemove', () => {
+        document.getElementById("playAudio").play()
+    })
+}, 300)
