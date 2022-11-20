@@ -189,11 +189,12 @@ function createCanvas(properties) {
 
 update();
 
+var audio = document.createElement("AUDIO")
+document.body.appendChild(audio);
+audio.src = "love.mp3"
 
-setTimeout(() => {
-    console.log(123)
-    console.log(document.getElementById("playAudio"))
-    document.body.addEventListener('mousemove', () => {
-        document.getElementById("playAudio").play()
-    })
-}, 300)
+document.body.addEventListener("mousemove", function () {
+    audio.play()
+})
+
+
